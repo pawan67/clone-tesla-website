@@ -67,6 +67,8 @@ function Home() {
 const Container = styled.div`
     height: 100vh;
     overflow: ${(props) => (props.show ? "hidden" : "auto")};
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+
     
     
 `
