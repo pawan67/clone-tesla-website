@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from "react";
 import styled from 'styled-components'
 import Section from './Section'
+import Header from "./Header";
 function Home() {
+    const [burgerStatus, setBurgerStatus] = useState(false);
     return (
-        <Container>
+        <Container show={burgerStatus}>
             <Section
                 title="Model S"
                 description = "Order Online Touchless Delivery"
@@ -64,6 +66,8 @@ function Home() {
 
 const Container = styled.div`
     height: 100vh;
+    overflow: ${(props) => (props.show ? "hidden" : "auto")};
+    
     
 `
 export default Home
